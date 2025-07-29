@@ -1,5 +1,5 @@
 {
-  "name": "@bull-board/ui",
+  "name": "@morpho-org/bull-board-ui",
   "version": "6.12.0",
   "description": "A Dashboard UI built on top of bull or bullmq.",
   "keywords": [

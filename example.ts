@@ -2,7 +2,7 @@
 import { createBullBoard } from '@bull-board/api/src';
 import { BullAdapter } from '@bull-board/api/src/queueAdapters/bull';
 import { BullMQAdapter } from '@bull-board/api/src/queueAdapters/bullMQ';
-import { ExpressAdapter } from '@bull-board/express/src';
+import { ExpressAdapter } from '@morpho-org/bull-board-express/src';
 import * as Bull from 'bull';
 import Queue3 from 'bull';
 import { FlowProducer, Queue as QueueMQ, Worker } from 'bullmq';

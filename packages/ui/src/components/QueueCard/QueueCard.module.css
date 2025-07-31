@@ -1,12 +1,20 @@
 .queueCard {
   flex-direction: column;
-  gap: 0.5rem;
   position: relative;
 }
 
 .link {
   color: inherit;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.link svg {
+  width: 10px;
+  fill: var(--text-color);
+  margin-right: 0.5rem;
 }
 
 .link:after {

@@ -120,9 +120,23 @@ export function useQueues(): Omit<QueuesState, 'updateQueues'> & { actions: Queu
       confirmQueueActions
     );
 
+  const pauseMultiple = (queueNames: string[]) =>
+    withConfirmAndUpdate(
+      () => Promise.all(queueNames.map((queueName) => api.pauseQueue(queueName))),
+      t('QUEUE.ACTIONS.CONFIRM.PAUSE_QUEUE'),
+      confirmQueueActions
+    );
+
   const resumeQueue = (queueName: string) =>
     withConfirmAndUpdate(
       () => api.resumeQueue(queueName),
+      t('QUEUE.ACTIONS.CONFIRM.RESUME_QUEUE'),
+      confirmQueueActions
+    );
+
+  const resumeMultiple = (queueNames: string[]) =>
+    withConfirmAndUpdate(
+      () => Promise.all(queueNames.map((queueName) => api.resumeQueue(queueName))),
       t('QUEUE.ACTIONS.CONFIRM.RESUME_QUEUE'),
       confirmQueueActions
     );
@@ -167,7 +181,9 @@ export function useQueues(): Omit<QueuesState, 'updateQueues'> & { actions: Queu
       cleanAll,
       cleanAllMultiple,
       pauseQueue,
+      pauseMultiple,
       resumeQueue,
+      resumeMultiple,
       emptyQueue,
       addJob,
     },

@@ -1,6 +1,6 @@
 {
   "name": "@bull-board/hapi",
-  "version": "6.12.0",
+  "version": "6.14.2",
   "description": "A Hapi.js server adapter for Bull-Board dashboard.",
   "keywords": [
     "bull",
@@ -24,19 +24,19 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "yarn clean && tsc",
     "build:watch": "tsc -w",
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@bull-board/api": "6.12.0",
-    "@bull-board/ui": "6.12.0",
+    "@bull-board/api": "6.14.2",
+    "@bull-board/ui": "6.14.2",
     "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
     "ejs": "^3.1.10"
   },
   "devDependencies": {
-    "@hapi/hapi": "^21.4.0",
+    "@hapi/hapi": "^21.4.3",
     "@types/hapi__hapi": "^20.0.13",
     "@types/hapi__inert": "^5.2.10",
     "@types/hapi__vision": "^5.5.8"
